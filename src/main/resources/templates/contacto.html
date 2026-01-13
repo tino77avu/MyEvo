@@ -24,20 +24,16 @@
             padding: 0 20px;
         }
 
-        /* Hero Section */
+        /* Hero Section - Reducido para que quepa todo en una vista */
         .hero {
             background-image: url('/images/Contacto.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             color: white;
-            padding: 100px 20px;
+            padding: 40px 20px 20px 20px;
             text-align: center;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            min-height: auto;
             position: relative;
         }
         
@@ -58,46 +54,52 @@
         }
 
         .hero h1 {
-            font-size: 4rem;
+            font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             letter-spacing: -1px;
         }
 
         .hero .headline {
-            font-size: 1.8rem;
+            font-size: 1.3rem;
             font-weight: 300;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .hero .subtitle {
-            font-size: 1.2rem;
+            font-size: 1rem;
             opacity: 0.95;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             max-width: 900px;
-            line-height: 1.8;
+            line-height: 1.6;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        /* Formulario de Contacto */
+        /* Formulario de Contacto - Integrado en la misma sección */
         .contact-section {
-            background: linear-gradient(135deg, #7D3BC2 0%, #A740B1 50%, #FE7A6F 100%);
+            background: transparent;
             color: white;
-            padding: 80px 20px;
+            padding: 20px 20px 40px 20px;
+            position: relative;
+            z-index: 2;
         }
 
         .contact-form {
             max-width: 700px;
             margin: 0 auto;
             background-color: rgba(255,255,255,0.15);
-            padding: 50px 40px;
+            padding: 30px 25px;
             border-radius: 20px;
             backdrop-filter: blur(15px);
             box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }
 
         .form-group {
-            margin-bottom: 25px;
+            margin-bottom: 18px;
         }
 
         .form-group label {
@@ -130,7 +132,7 @@
         }
 
         .form-group textarea {
-            min-height: 150px;
+            min-height: 100px;
             resize: vertical;
         }
 
@@ -351,9 +353,9 @@
         }
 
         .section-title {
-            font-size: 2.5rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             text-align: center;
             color: white;
         }
@@ -361,19 +363,27 @@
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
 
             .hero .headline {
-                font-size: 1.4rem;
+                font-size: 1.1rem;
+            }
+
+            .hero .subtitle {
+                font-size: 0.9rem;
             }
 
             .contact-form {
-                padding: 30px 20px;
+                padding: 25px 20px;
             }
 
             .section-title {
-                font-size: 2rem;
+                font-size: 1.5rem;
+            }
+
+            .form-group {
+                margin-bottom: 15px;
             }
         }
     </style>
@@ -392,24 +402,24 @@
                 <li><a href="/evolucion4/como-funciona">Cómo Funciona</a></li>
                 <li><a href="/evolucion4/lo-que-logras">Lo que logras</a></li>
                 <li><a href="/evolucion4/por-que-evo">Por qué EVO</a></li>
+                <li><a href="/evolucion4/planes">Planes</a></li>
                 <li><a href="/evolucion4/contacto">Contacto</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION CON FORMULARIO INTEGRADO -->
     <section class="hero">
         <div class="container">
             <h1>Contacto</h1>
             <p class="headline">Estamos aquí para ayudarte</p>
             <p class="subtitle">Si tienes dudas, preguntas o simplemente quieres saber más sobre EVO, escríbenos con confianza. Estaremos encantados de leerte y ayudarte en lo que necesites, a tu ritmo y sin compromiso.</p>
         </div>
-    </section>
-
-    <!-- FORMULARIO DE CONTACTO -->
-    <section class="contact-section" id="formulario">
-        <div class="container">
-            <h2 class="section-title" style="color: white; margin-bottom: 40px;">Envía tu consulta</h2>
+        
+        <!-- FORMULARIO DE CONTACTO -->
+        <div class="contact-section" id="formulario">
+            <div class="container">
+                <h2 class="section-title" style="color: white; margin-bottom: 20px;">Envía tu consulta</h2>
             <form class="contact-form" th:action="@{/evolucion4/contacto}" method="post" id="contactForm">
                 <div class="success-message" id="successMessage">
                     ¡Gracias por contactarnos! Te responderemos pronto.
@@ -432,6 +442,7 @@
                 </div>
                 <button type="submit" class="btn-submit">Enviar consulta</button>
             </form>
+            </div>
         </div>
     </section>
 
@@ -439,9 +450,9 @@
     <footer>
         <div class="footer-content">
             <div class="footer-links">
-                <a href="/evolucion4/seguridad">Política de Privacidad</a>
-                <a href="/evolucion4/seguridad">Términos y Condiciones</a>
-                <a href="/evolucion4/seguridad">Política de Cookies</a>
+                <a href="/evolucion4/politica-privacidad">Política de Privacidad</a>
+                <a href="/evolucion4/terminos-condiciones">Términos y Condiciones</a>
+                <a href="/evolucion4/politica-cookies">Política de Cookies</a>
                 <a href="/evolucion4/contacto">Contacto</a>
             </div>
             <div class="social-links">

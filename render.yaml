@@ -12,3 +12,5 @@ services:
         value: production
     healthCheckPath: /
     autoDeploy: true
+    buildCommand: ""
+    startCommand: ""

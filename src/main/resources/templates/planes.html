@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lo que logras - EVO ↑</title>
+    <title>Planes - EVO ↑</title>
     <style>
         * {
             margin: 0;
@@ -16,184 +16,13 @@
             line-height: 1.6;
             color: #333;
             background-color: #ffffff;
+            min-height: 100vh;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
-        }
-
-        /* Hero Section */
-        .hero {
-            background-image: url('/images/Beneficios.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: white;
-            padding: 100px 20px;
-            text-align: center;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(125, 59, 194, 0.3) 0%, rgba(167, 64, 177, 0.3) 50%, rgba(254, 122, 111, 0.3) 100%);
-            z-index: 1;
-        }
-        
-        .hero > * {
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            letter-spacing: -1px;
-        }
-
-        .hero .headline {
-            font-size: 1.8rem;
-            font-weight: 300;
-            margin-bottom: 20px;
-            max-width: 800px;
-        }
-
-        .hero .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.95;
-            margin-bottom: 40px;
-            max-width: 900px;
-            line-height: 1.8;
-        }
-
-        /* Secciones generales */
-        .section {
-            padding: 80px 20px;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 30px;
-            text-align: center;
-            color: white;
-        }
-
-        .section-content {
-            max-width: 900px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-
-        /* Beneficios Section */
-        .beneficios {
-            background: linear-gradient(135deg, #7D3BC2 0%, #A740B1 50%, #FE7A6F 100%);
-            color: white;
-        }
-
-        .beneficios-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .beneficio-categoria {
-            background-color: rgba(255,255,255,0.15);
-            padding: 30px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-        }
-
-        .beneficio-categoria h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: white;
-        }
-
-        .beneficio-categoria ul {
-            list-style: none;
-        }
-
-        .beneficio-categoria li {
-            padding: 12px 0;
-            padding-left: 30px;
-            position: relative;
-            color: white;
-        }
-
-        .beneficio-categoria li:before {
-            content: "✨";
-            position: absolute;
-            left: 0;
-        }
-
-        /* Ejemplo de Feedback */
-        .ejemplo-feedback {
-            background: linear-gradient(135deg, #7D3BC2 0%, #A740B1 50%, #FE7A6F 100%);
-            color: white;
-            padding: 80px 20px;
-        }
-
-        .feedback-box {
-            background-color: white;
-            color: #333;
-            padding: 40px;
-            border-radius: 15px;
-            max-width: 700px;
-            margin: 30px auto;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-        }
-
-        .feedback-box h3 {
-            color: #7D3BC2;
-            margin-bottom: 25px;
-            font-size: 1.8rem;
-        }
-
-        .feedback-item {
-            padding: 15px 0;
-            padding-left: 35px;
-            position: relative;
-            font-size: 1.1rem;
-        }
-
-        .feedback-item.positivo:before {
-            content: "✔";
-            position: absolute;
-            left: 0;
-            color: #28a745;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .feedback-item.refuerzo:before {
-            content: "🔁";
-            position: absolute;
-            left: 0;
-            font-size: 1.5rem;
-        }
-
-        .feedback-mensaje {
-            margin-top: 25px;
-            padding-top: 25px;
-            border-top: 2px solid #eee;
-            font-style: italic;
-            color: #555;
         }
 
         /* Navbar */
@@ -289,12 +118,187 @@
             }
         }
 
+        /* Hero Section */
+        .hero {
+            background-image: url('/images/planes.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+            padding: 80px 20px 60px;
+            color: white;
+            position: relative;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(125, 59, 194, 0.3) 0%, rgba(167, 64, 177, 0.3) 50%, rgba(254, 122, 111, 0.3) 100%);
+            z-index: 1;
+        }
+
+        .hero > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .hero .subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Pricing Cards */
+        .pricing-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background-color: #fff;
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 40px 30px;
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            border-color: #7D3BC2;
+            box-shadow: 0 10px 30px rgba(125, 59, 194, 0.3);
+        }
+
+        .pricing-card.popular {
+            border-color: #7D3BC2;
+            box-shadow: 0 0 20px rgba(125, 59, 194, 0.2);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: 20px;
+            right: -10px;
+            background: linear-gradient(135deg, #7D3BC2 0%, #A740B1 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transform: rotate(15deg);
+            box-shadow: 0 3px 10px rgba(125, 59, 194, 0.4);
+        }
+
+        .plan-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #7D3BC2;
+            margin-bottom: 10px;
+        }
+
+        .plan-subtitle {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .plan-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .plan-period {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        .plan-features li {
+            padding: 12px 0;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .plan-features li::before {
+            content: "✓";
+            color: #7D3BC2;
+            font-weight: bold;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .plan-button {
+            width: 100%;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 10px;
+            border: 2px solid #7D3BC2;
+            background-color: transparent;
+            color: #7D3BC2;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        .plan-button:hover {
+            background-color: #7D3BC2;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(125, 59, 194, 0.4);
+        }
+
+        .plan-button.primary {
+            background-color: #7D3BC2;
+            border-color: #7D3BC2;
+            color: #fff;
+        }
+
+        .plan-button.primary:hover {
+            background-color: #A740B1;
+            border-color: #A740B1;
+        }
+
         /* Footer */
         footer {
             background-color: #2c3e50;
             color: white;
             padding: 50px 20px;
             text-align: center;
+            margin-top: 60px;
         }
 
         .footer-content {
@@ -325,6 +329,7 @@
             padding-top: 30px;
             border-top: 1px solid rgba(255,255,255,0.2);
             opacity: 0.8;
+            text-align: left;
         }
         .social-links {
             display: flex;
@@ -374,22 +379,22 @@
             fill: white;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero .headline {
-                font-size: 1.4rem;
-            }
-
-            .section-title {
                 font-size: 2rem;
             }
 
-            .beneficios-grid {
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+
+            .pricing-container {
                 grid-template-columns: 1fr;
+                padding: 40px 20px;
+            }
+
+            .plan-price {
+                font-size: 2rem;
             }
         }
     </style>
@@ -417,52 +422,62 @@
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="container">
-            <h1>Lo que logras</h1>
-            <p class="headline">Beneficios y resultados reales</p>
-            <p class="subtitle">EVO te ayuda a ganar claridad sobre tu proceso personal, a reconocer tus avances y a entender cómo estás evolucionando con el tiempo. Al ver tu progreso de forma concreta, te resulta más fácil mantener la constancia, fortalecer tu bienestar y avanzar con mayor seguridad en tu camino.</p>
+            <h1>Elige el Plan Perfecto para Ti</h1>
+            <p class="subtitle">Selecciona el plan que mejor se adapte a tus necesidades y comienza tu proceso de crecimiento personal con EVO ↑</p>
         </div>
     </section>
 
-    <!-- BENEFICIOS -->
-    <section class="section beneficios" id="beneficios">
-        <div class="container">
-            <h2 class="section-title">Beneficios claros</h2>
-            <div class="beneficios-grid">
-                <div class="beneficio-categoria">
-                    <h3>Beneficios emocionales</h3>
-                    <ul>
-                        <li>Te entiendes mejor</li>
-                        <li>Ves tu progreso real</li>
-                        <li>Reduces autoexigencia</li>
-                        <li>Ganas constancia</li>
-                    </ul>
-                </div>
-                <div class="beneficio-categoria">
-                    <h3>Beneficios prácticos</h3>
-                    <ul>
-                        <li>Resúmenes automáticos</li>
-                        <li>Feedback sin juicio</li>
-                        <li>Seguimiento estructurado</li>
-                        <li>Todo en un solo lugar</li>
-                    </ul>
-                </div>
-            </div>
+    <!-- PRICING CARDS -->
+    <section class="pricing-container">
+        <!-- Plan Básico -->
+        <div class="pricing-card">
+            <h2 class="plan-title">Básico</h2>
+            <p class="plan-subtitle">Ideal para comenzar tu proceso personal</p>
+            <div class="plan-price">$9.99</div>
+            <div class="plan-period">/mensual</div>
+            <ul class="plan-features">
+                <li>Reflexiones ilimitadas</li>
+                <li>Análisis de progreso semanal</li>
+                <li>Reconocimiento de logros</li>
+                <li>Feedback personalizado</li>
+                <li>Soporte por email</li>
+            </ul>
+            <a href="/evolucion4/contacto" class="plan-button">Empezar</a>
         </div>
-    </section>
 
-    <!-- EJEMPLO DE FEEDBACK -->
-    <section class="ejemplo-feedback" id="ejemplo">
-        <div class="container">
-            <h2 class="section-title">Ejemplo de feedback</h2>
-            <div class="feedback-box">
-                <h3>Resumen semanal</h3>
-                <div class="feedback-item positivo">Mostraste constancia durante la semana</div>
-                <div class="feedback-item positivo">Tu enfoque fue más positivo que la anterior</div>
-                <div class="feedback-item refuerzo">Puedes reforzar la gestión del estrés en días laborales</div>
-                <div class="feedback-mensaje">
-                    Vas por buen camino. Evolucionar también es reconocer lo que ya lograste.
-                </div>
-            </div>
+        <!-- Plan Premium -->
+        <div class="pricing-card popular">
+            <div class="popular-badge">Popular</div>
+            <h2 class="plan-title">Premium</h2>
+            <p class="plan-subtitle">Para quienes buscan un acompañamiento más profundo</p>
+            <div class="plan-price">$19.99</div>
+            <div class="plan-period">/mensual</div>
+            <ul class="plan-features">
+                <li>Todas las funciones del plan Básico</li>
+                <li>Análisis de progreso diario</li>
+                <li>Insights avanzados y tendencias</li>
+                <li>Recordatorios personalizados</li>
+                <li>Exportación de datos</li>
+                <li>Soporte prioritario</li>
+            </ul>
+            <a href="/evolucion4/contacto" class="plan-button primary">Empezar</a>
+        </div>
+
+        <!-- Plan Personalizado -->
+        <div class="pricing-card">
+            <h2 class="plan-title">Personalizado</h2>
+            <p class="plan-subtitle">Solución a medida para tu proceso único</p>
+            <div class="plan-price">Personalizado</div>
+            <div class="plan-period">a medida</div>
+            <ul class="plan-features">
+                <li>Todas las funcionalidades</li>
+                <li>Configuración personalizada</li>
+                <li>Integraciones según necesidad</li>
+                <li>Capacitación incluida</li>
+                <li>Soporte 24/7 dedicado</li>
+                <li>Consultoría personalizada</li>
+            </ul>
+            <a href="/evolucion4/contacto" class="plan-button">Contratar</a>
         </div>
     </section>
 
@@ -512,20 +527,6 @@
                 menu.classList.toggle('active');
             }
         }
-        
-        // Smooth scroll para los enlaces internos
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
     </script>
 </body>
 </html>

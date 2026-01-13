@@ -84,6 +84,26 @@ public class EvolucionController {
         return "contacto";
     }
 
+    @GetMapping("/evolucion4/politica-privacidad")
+    public String politicaPrivacidad() {
+        return "politica-privacidad";
+    }
+
+    @GetMapping("/evolucion4/terminos-condiciones")
+    public String terminosCondiciones() {
+        return "terminos-condiciones";
+    }
+
+    @GetMapping("/evolucion4/politica-cookies")
+    public String politicaCookies() {
+        return "politica-cookies";
+    }
+
+    @GetMapping("/evolucion4/planes")
+    public String planes() {
+        return "planes";
+    }
+
     @PostMapping("/evolucion4/contacto")
     public String enviarConsulta(
             @RequestParam String nombre,
