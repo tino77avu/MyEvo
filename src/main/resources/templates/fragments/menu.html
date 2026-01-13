@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+    <div th:fragment="menu">
+        <style>
+            .navbar {
+                background-color: #fff;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                padding: 15px 0;
+            }
+            .nav-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .logo {
+                font-size: 1.8rem;
+                font-weight: 700;
+                color: #667eea;
+                text-decoration: none;
+            }
+            .nav-menu {
+                display: flex;
+                list-style: none;
+                gap: 30px;
+                flex-wrap: wrap;
+                margin: 0;
+                padding: 0;
+            }
+            .nav-menu li {
+                margin: 0;
+            }
+            .nav-menu a {
+                text-decoration: none;
+                color: #333;
+                font-weight: 500;
+                transition: color 0.3s ease;
+                padding: 5px 0;
+            }
+            .nav-menu a:hover,
+            .nav-menu a.active {
+                color: #667eea;
+            }
+            .menu-toggle {
+                display: none;
+                background: none;
+                border: none;
+                font-size: 1.5rem;
+                cursor: pointer;
+                color: #333;
+            }
+            @media (max-width: 768px) {
+                .menu-toggle {
+                    display: block;
+                }
+                .nav-menu {
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    right: 0;
+                    background-color: white;
+                    flex-direction: column;
+                    padding: 20px;
+                    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                }
+                .nav-menu.active {
+                    display: flex;
+                }
+            }
+        </style>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="/evolucion4" class="logo">EVO ↑</a>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/evolucion4" th:classappend="${#httpServletRequest.requestURI == '/evolucion4' or #httpServletRequest.requestURI == '/'} ? 'active'">Inicio</a></li>
+                    <li><a href="/evolucion4/problema" th:classappend="${#httpServletRequest.requestURI == '/evolucion4/problema'} ? 'active'">El Problema</a></li>
+                    <li><a href="/evolucion4/solucion" th:classappend="${#httpServletRequest.requestURI == '/evolucion4/solucion'} ? 'active'">La Solución</a></li>
+                    <li><a href="/evolucion4/como-funciona" th:classappend="${#httpServletRequest.requestURI == '/evolucion4/como-funciona'} ? 'active'">Cómo Funciona</a></li>
+                    <li><a href="/evolucion4/beneficios" th:classappend="${#httpServletRequest.requestURI == '/evolucion4/beneficios'} ? 'active'">Beneficios</a></li>
+                    <li><a href="/evolucion4/ejemplo" th:classappend="${#httpServletRequest.requestURI == '/evolucion4/ejemplo'} ? 'active'">Ejemplo</a></li>
+                    <li><a href="/evolucion4/para-quien" th:classappend="${#httpServletRequest.requestURI == '/evolucion4/para-quien'} ? 'active'">Para Quién</a></li>
+                    <li><a href="/evolucion4/diferencias" th:classappend="${#httpServletRequest.requestURI == '/evolucion4/diferencias'} ? 'active'">Diferencias</a></li>
+                    <li><a href="/evolucion4/seguridad" th:classappend="${#httpServletRequest.requestURI == '/evolucion4/seguridad'} ? 'active'">Seguridad</a></li>
+                    <li><a href="/evolucion4/faq" th:classappend="${#httpServletRequest.requestURI == '/evolucion4/faq'} ? 'active'">FAQ</a></li>
+                </ul>
+            </div>
+        </nav>
+        <script>
+            function toggleMenu() {
+                const menu = document.getElementById('navMenu');
+                if (menu) {
+                    menu.classList.toggle('active');
+                }
+            }
+        </script>
+    </div>
+
+    <div th:fragment="footer">
+        <style>
+            footer {
+                background-color: #2c3e50;
+                color: white;
+                padding: 50px 20px;
+                text-align: center;
+            }
+            .footer-content {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            .footer-links {
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+                margin: 30px 0;
+                flex-wrap: wrap;
+            }
+            .footer-links a {
+                color: white;
+                text-decoration: none;
+                transition: opacity 0.3s ease;
+            }
+            .footer-links a:hover {
+                opacity: 0.7;
+            }
+            .copyright {
+                margin-top: 30px;
+                padding-top: 30px;
+                border-top: 1px solid rgba(255,255,255,0.2);
+                opacity: 0.8;
+            }
+        </style>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="/evolucion4/seguridad">Privacidad</a>
+                    <a href="/evolucion4/faq">Términos</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+                <div class="copyright">
+                    <p>EVO ↑ © 2026</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
