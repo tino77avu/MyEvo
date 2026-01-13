@@ -24,6 +24,8 @@ EVO es un espacio personal diseñado para acompañarte en tu día a día. Aquí 
 
 ## 🔧 Instalación
 
+### Opción 1: Ejecución Local
+
 1. Clona el repositorio:
 ```bash
 git clone git@github.com:tino77avu/Evo.git
@@ -44,6 +46,29 @@ mvn spring-boot:run
 ```
 http://localhost:8080
 ```
+
+### Opción 2: Usando Docker
+
+1. Construye la imagen Docker:
+```bash
+docker build -t evo-app .
+```
+
+2. Ejecuta el contenedor:
+```bash
+docker run -p 8080:8080 evo-app
+```
+
+3. Abre tu navegador en:
+```
+http://localhost:8080
+```
+
+## 🚀 Despliegue en Render
+
+Para desplegar la aplicación en Render, consulta la [Guía de Despliegue](DEPLOY.md).
+
+La aplicación está lista para desplegarse en Render usando Docker. Simplemente conecta tu repositorio de GitHub en Render y sigue las instrucciones.
 
 ## 📁 Estructura del Proyecto
 
